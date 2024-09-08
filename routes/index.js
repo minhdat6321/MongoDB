@@ -25,4 +25,8 @@ router.get("/template/:test", async (req, res, next) => {
 const fooRouter = require("./foo.api.js")
 router.use("/foo", fooRouter)
 
+//Add boo api to index routes
+const booRouter = require("./boo.api.js")
+router.use("/boo", booRouter)
+
 module.exports = router;
